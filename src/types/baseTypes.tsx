@@ -1,0 +1,1 @@
+export type baseTypes = "success" | "warning" | "error" | "default" | "info" | "impressao";
