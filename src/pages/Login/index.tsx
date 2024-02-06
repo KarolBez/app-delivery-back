@@ -5,8 +5,7 @@ import Texto from "../../components/Texto";
 import Formulario from "../../components/Inputs";
 import Botao from "../../components/Botao";
 
-
-export default function Login() {
+export default function Login({ navigation }: any) {
 
     const { control } = useForm();
 
@@ -43,7 +42,7 @@ export default function Login() {
                     </Formulario>
 
                     <Botao
-                        handleAction={() => { }}
+                        handleAction={() => navigation.navigate("Home")}
                         type="warning"
                         texto="Entrar"
                     />

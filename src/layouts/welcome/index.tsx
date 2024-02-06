@@ -1,24 +1,37 @@
-import { Image, ImageBackground, SafeAreaView, ScrollView, Text, View } from "react-native"
-import Formulario from "../../components/Inputs"
-import { useForm } from "react-hook-form"
+import { Image, ImageBackground, View } from "react-native"
 import Botao from "../../components/Botao"
 import Title from "../../components/Title"
-import Texto from "../../components/Texto"
 import Login from "../../pages/Login"
+import PagerView from "react-native-pager-view"
+import { createRef, useRef, useState } from "react"
 
-export function PagerOne() {
+export default function PaginaInicial() {
+    
+    return (
+        <PagerView style={{ flex: 1 }}>
+            <PaginaUm />
+            <PaginaDois />
+            <Login />
+        </PagerView>
+    );
+}
 
-    const pizza = require("../../imgs/p1.png")
+
+export function PaginaUm() {
+ 
+    const pizza = require("../../imgs/p2.png")
     const backYellow = require("../../imgs/background_yellow.jpg")
 
     return (
         <View className="flex-1">
             <ImageBackground source={backYellow} className="flex-1 justify-between py-8" resizeMode="cover">
 
-                <Image resizeMode="contain" className="h-72 w-full -ml-20" source={pizza} />
+                <Image resizeMode="cover" className="h-96 w-full -ml-20" source={pizza} />
 
-                <View className='mx-6 px-2 border-l-2'>
-                    <Title className="text-3xl text-gray-900/90">Que bom que ter você por aqui. Bateu a fome, eemmm?!</Title>
+                <View className='mx-6'>
+                    <Title className="text-3xl text-gray-900/90">Que bom que ter</Title>
+                    <Title className="text-3xl text-gray-900/90">você por aqui. Bateu</Title>
+                    <Title className="text-3xl text-gray-900/90">a fome, eemmm?!</Title>
                 </View>
 
                 <Botao
@@ -34,7 +47,7 @@ export function PagerOne() {
     )
 }
 
-export function PagerTwo() {
+export function PaginaDois() {
 
     const prato = require("../../imgs/c1.png")
     const backGreen = require("../../imgs/background_green.jpg")
@@ -43,15 +56,15 @@ export function PagerTwo() {
         <View className="flex-1">
             <ImageBackground source={backGreen} className="flex-1 justify-between py-8" resizeMode="cover">
 
+                <View className='mx-6 mt-6'>
+                    <Title className="text-3xl text-white text-right">Aproveite ao máximo nosso APP com os melhores estabelcimentos </Title>
+                    <Title className="text-3xl text-white text-right">da cidade.</Title>
+                </View>
                 <Image resizeMode="contain" className="h-72 w-full " source={prato} />
 
-                <View className='mx-6 px-2 border-l-2 border-white'>
-                    <Title className="text-3xl text-white">Aproveite ao máximo nosso APP com os melhores estabelcimentos </Title>
-                    <Title className="text-3xl text-white">da cidade.</Title>
-                </View>
 
                 <Botao
-                    handleAction={() => { }}
+                    handleAction={() => {}}
                     type="default"
                     texto="Continuar"
                     icon="angle-double-right"
@@ -60,12 +73,5 @@ export function PagerTwo() {
                 />
             </ImageBackground>
         </View>
-    )
-}
-
-export function PagerTree() {
-
-    return (
-        <Login />
     )
 }
