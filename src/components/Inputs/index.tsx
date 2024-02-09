@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Control, Controller, FieldErrors, FieldValues, UseFormRegister, UseFormSetError, useController } from "react-hook-form";
-import { Pressable, Text, TextInput, View } from "react-native";
+import { KeyboardAvoidingView, Pressable, Text, TextInput, View } from "react-native";
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import { styled } from "nativewind";
 import SelectDropdown from "react-native-select-dropdown";
@@ -51,7 +51,9 @@ export default function Formulario({ children, className }: PropsForm) {
 
     return (
         <StyledView className={`w-full ${className}`}>
-            {children}
+            <KeyboardAvoidingView enabled>
+                {children}
+            </KeyboardAvoidingView>
         </StyledView>
     )
 }

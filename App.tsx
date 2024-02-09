@@ -4,18 +4,15 @@ import React from 'react';
 import PaginaInicial from './src/layouts/welcome';
 import Home from './src/pages/Home';
 import Pagamento from './src/pages/Pagamento';
+import Router from './src/routers';
 
-const Stack = createNativeStackNavigator();
+
 
 function App(): React.JSX.Element {
 
     return (
         <NavigationContainer>
-            <Stack.Navigator>
-                <Stack.Screen name='Payment' component={ Pagamento }  />
-                <Stack.Screen name='Home' component={ Home }  />
-                <Stack.Screen name='PageView' component={ PaginaInicial } options={{ headerShown: false }} />
-            </Stack.Navigator>
+            <Router />
         </NavigationContainer>
     );
 }

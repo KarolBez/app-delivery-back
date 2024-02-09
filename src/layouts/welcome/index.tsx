@@ -1,4 +1,4 @@
-import { Image, ImageBackground, View } from "react-native"
+import { Image, ImageBackground, SafeAreaView, SafeAreaViewBase, ScrollView, View } from "react-native"
 import Botao from "../../components/Botao"
 import Title from "../../components/Title"
 import Login from "../../pages/Login"
@@ -8,7 +8,7 @@ import { createRef, useRef, useState } from "react"
 export default function PaginaInicial() {
     
     return (
-        <PagerView style={{ flex: 1 }}>
+        <PagerView className="h-screen">
             <PaginaUm />
             <PaginaDois />
             <Login />
