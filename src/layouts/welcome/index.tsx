@@ -23,7 +23,7 @@ export function PaginaUm() {
     const backYellow = require("../../imgs/background_yellow.jpg")
 
     return (
-        <View className="flex-1">
+        <View className="flex-1 pb-6">
             <ImageBackground source={backYellow} className="flex-1 justify-between py-8" resizeMode="cover">
 
                 <Image resizeMode="cover" className="h-96 w-full -ml-20" source={pizza} />
@@ -53,7 +53,7 @@ export function PaginaDois() {
     const backGreen = require("../../imgs/background_green.jpg")
 
     return (
-        <View className="flex-1">
+        <View className="flex-1 pb-6">
             <ImageBackground source={backGreen} className="flex-1 justify-between py-8" resizeMode="cover">
 
                 <View className='mx-6 mt-6'>
