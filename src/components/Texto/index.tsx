@@ -19,12 +19,15 @@ export default function Texto({ className, children, fontWeight }: Props) {
                     fontWeight == "600" && "Inter SemiBold" ||
                     fontWeight == "700" && "Inter Bold" ||
                     fontWeight == "800" && "Inter ExtraBold" ||
-                    fontWeight == "900" && "Inter Black" ||
-                    "Inter" 
+                    fontWeight == "900" && "Inter Black" || "Inter",
+                textShadowOffset: { height: 4, width: 4 },
+                textShadowRadius: 12,
+                textShadowColor: "rgba(102, 102, 102, 0.1)"
+
             }}
             className={`${className}`}
         >
-            { children }
+            {children}
         </Text>
     )
 }
