@@ -9,34 +9,35 @@ export default function Home({ navigation }: any) {
 
     return (
         <SafeAreaView className="p-4 bg-white flex-1">
-            <View>
-                <View className="flex flex-row justify-between items-center">
-                    <View className="flex flex-row items-center gap-2 mb-4">
-                        <Image style={{
-                            shadowOffset: { height: 4, width: 4 },
-                            shadowRadius: 12,
-                            shadowColor: "rgba(102, 102, 102, 0.4)"
-                        }} source={imagem} className="w-12 h-12 rounded-full" />
-                        <View>
-                            <Texto fontWeight="500">Olá, boa noite 👋</Texto>
-                            <Texto fontWeight="700" className="text-base">Thiago Marques</Texto>
-                        </View>
-                    </View>
+            <View className="flex flex-row justify-between items-center">
+                <View className="flex flex-row items-center gap-2 py-2">
+                    <Image style={{
+                        shadowOffset: { height: 4, width: 4 },
+                        shadowRadius: 12,
+                        shadowColor: "rgba(102, 102, 102, 0.4)"
+                    }} source={imagem} className="w-12 h-12 rounded-full" />
                     <View>
-                        <BotaoIcon
-                            handleAction={() => {}}
-                            icon="home"
-                            type="warning"
-                        />
+                        <Texto fontWeight="500">Olá, boa noite 👋</Texto>
+                        <Texto fontWeight="700" className="text-base">Thiago Marques</Texto>
                     </View>
                 </View>
-
-                <Botao
-                    handleAction={() => navigation.navigate("PageView")}
-                    type="success"
-                    texto="Inicio"
+                <BotaoIcon
+                    handleAction={() => { }}
+                    icon="cart-arrow-down"
+                    type="default"
                 />
             </View>
+
+            <View className="w-full h-32 my-2 rounded-xl bg-gray-100 border border-gray-300/90">
+            </View>
+
+            
+
+            <Botao
+                handleAction={() => navigation.navigate("PageView")}
+                type="success"
+                texto="Inicio"
+            />
         </SafeAreaView>
     )
 }

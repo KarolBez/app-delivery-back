@@ -33,13 +33,13 @@ export default function BotaoIcon(props: Props) {
         <TouchableOpacity activeOpacity={0.82}
             disabled={disabled}
             onPress={() => handleAction()}
-            className={`flex justify-between items-center rounded-xl px-3 py-1.5 ${typeButton} ${className}`}
+            className={`flex justify-between items-center rounded-xl px-3 py-2 ${typeButton} ${className}`}
         >
             <>
                 <View className={"flex justify-center items-center"}>
                     <Icon
                         name={icon}
-                        size={22}
+                        size={18}
                         color={
                             ["default", ""].includes(type) && "gray" || "white"
                         }
