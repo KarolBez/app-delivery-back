@@ -12,6 +12,8 @@ namespace ApiAuth.Account
         Task<bool> UserExists(string email);
 
         public string GenerateToken(string nome, string email);
+        
+        public Task<Usuario> GetUserByEmail(string email);
 
 
     }

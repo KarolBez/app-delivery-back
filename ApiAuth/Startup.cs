@@ -32,6 +32,9 @@ public void ConfigureServices(IServiceCollection services)
     //     c.SwaggerDoc("v1",new OpenApiInfo { Tittle = "APP-DELIVERY-BACK-MAIN.API", Version = "v1" });
 
     // });
+
+    services.AddScoped<ClienteRepository, ClienteRepository>();
+
     services.AddInfrastructure(Configuration);
 
 }
@@ -50,6 +53,8 @@ public void Configure(IApplicationBuilder app, IWestHostEnvironment env)
         app.UseRouting();
 
         app.UseAuthorization();
+
+        app.UseAuthentication();
 
         app.UseEndpoints(endpoints =>
         {

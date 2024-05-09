@@ -36,6 +36,12 @@ namespace ApiAuth.Identify
             return true;
         }
 
+
+        public async Task<Usuario> GetUserEmail(string email)
+        {
+            return await _context.Usuario.Where(x => x.Email.ToLower() == email.ToLower()).FirstOrDefaultAsync();
+        }
+
         public async Task<bool> UserExists(string email)
         {
             var usuario = await_context.Usuario.Where(x => x.Email.ToLower() ==email.ToLower()).FirstOrDefaultAsync

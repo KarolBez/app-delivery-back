@@ -7,7 +7,7 @@ namespace ApiAuth.Interfaces
 {
     public interface ClienteRepository
     {
-        Task<Cliente>  Incluir(Cliente cliente);
+        Task<Cliente> Incluir(Cliente cliente);
 
         Task<Cliente> Alterar(Cliente cliente);
 
